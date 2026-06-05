@@ -1,5 +1,6 @@
 package lambda.lambda4;
 
+import java.util.Random;
 import java.util.function.Supplier;
 
 public class SupplierMain {
@@ -18,5 +19,9 @@ public class SupplierMain {
         //Lambda.
         Supplier<String> supplier2 = () -> "Welcome to lambda supplier";
         System.out.println(supplier2.get());
+
+        Supplier<Integer> supplier3 =() -> new Random().nextInt(10);
+        System.out.println(supplier3.get());
+
     }
 }
