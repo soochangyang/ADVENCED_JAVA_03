@@ -29,7 +29,9 @@ public class LazyEvalMain3 {
         System.out.println("== MyStreamV3 End ==");
     }
 
-    //Short-circuit 단축 평가
+    // Lazy Evaluation 이란
+    // Intermediate Operation (중간 연산 ex: filter, map) 들은 terminal operation(최종연산: ex)toList, forEach, findFirst)이 호출 되기 전까지 실행 되지 않는다.
+    // 이를 Short-circuit 단축 평가 이라한다 (findFirst, anyMatch, limit을 사용하면 불필요한 연산을 최소화 한다)
     private static void ex2(List<Integer> data) {
         System.out.println("== Sream API Start ==");
         Integer result = data.stream()
