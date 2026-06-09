@@ -12,6 +12,7 @@ public class LazyEvalMain2 {
             ex2(data);
         }
 
+        //Eager Evaluation
         private static void ex1(List<Integer> data) {
             System.out.println("== MyStreamV3 Star ==");
             MyStreamV3.of(data)
@@ -29,6 +30,7 @@ public class LazyEvalMain2 {
             System.out.println("== MyStreamV3 End ==");
         }
 
+        //Lazy Evaluation
         private static void ex2(List<Integer> data) {
             System.out.println("== Sream API Start ==");
             data.stream()

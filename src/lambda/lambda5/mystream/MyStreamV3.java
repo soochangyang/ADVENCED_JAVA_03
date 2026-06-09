@@ -47,4 +47,9 @@ public class MyStreamV3<T> {
             consumer.accept(element);
         }
     }
+
+    public T getFirst(){
+        //internalList.getFirst(); // from java 21
+        return internalList.get(0);
+    }
 }
