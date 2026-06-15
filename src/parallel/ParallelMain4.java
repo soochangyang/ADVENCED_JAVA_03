@@ -18,7 +18,7 @@ public class ParallelMain4 {
 
         //Stream. 에  parallel 을 선언하여 ForkJoinPool을 사용함.
         int sum = IntStream.rangeClosed(1, 8)
-                .parallel()
+                .parallel() // 병렬처리
                 .map(HeavyJob::heavyTask)
                 .reduce(0, (a, b) -> a + b);
 
